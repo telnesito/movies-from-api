@@ -24,8 +24,6 @@ const emptyContainer = ()=>{
 
 async function getData(){
 
-  let cont = 0
-
   try {
 
     let res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=8bbf52595246dbe63fef3ba5b8e4e282&page=${pagina}"),
@@ -33,8 +31,7 @@ async function getData(){
     peliculas = "";
     
     json.forEach(element => {
-      cont++
-      if(cont < 19){
+     
         let img = element.poster_path || element.backdrop_path;
         // console.log(element)
         peliculas +=`
@@ -45,8 +42,6 @@ async function getData(){
         </figure>
         </div>`
         
-      }
-
     });
 
     $contenedorPeliculas.innerHTML = peliculas
