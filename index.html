@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link href="style.css" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moviel-net</title>
-</head>
-<body>
-
-  <div id="cont-principal" class="hero">
-
-    <div class="information">
-      <div class="information-text">
-        <a href="index.html"><span id="firts-letter">W</span>elcome</a>
-        <h2>Millions of movies, TV shows and people to discover. Explore now.</h2>
-        <img src="loader/SVG-Loaders-master/svg-loaders/rings.svg" alt="cargando">
-      </div>
-      <div class="peliculas">
-        <div id="contenedor-buscador">
-          <input required id="input-search" type="text" placeholder="Find a movie..">
-          <input id="input-btn" type="button" value="Search">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moviel-net</title>
+  </head>
+  <body>
+    <div id="cont-principal" class="hero">
+      <div class="information">
+        <div class="information-text">
+          <a href="index.html"><span id="firts-letter">W</span>elcome</a>
+          <h2>
+            Millions of movies, TV shows and people to discover. Explore now.
+          </h2>
+          <img
+            src="loader/SVG-Loaders-master/svg-loaders/rings.svg"
+            alt="cargando"
+          />
         </div>
+        <div class="peliculas">
+          <div id="contenedor-buscador">
+            <input
+              required
+              id="input-search"
+              type="text"
+              placeholder="Find a movie.."
+            />
+            <input id="input-btn" type="button" value="Search" />
+          </div>
+        </div>
+      </div>
+      <div id="contenedor-peliculas"></div>
+      <h3 class="similar-movies-style" id="similar-movies"></h3>
     </div>
-  </div>
-    <div id="contenedor-peliculas"></div>
-    <h3 class="similar-movies-style" id="similar-movies"></h3>
-
-    
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="script.js" type="module"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
