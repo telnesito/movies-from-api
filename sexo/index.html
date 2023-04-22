@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Editor de código con consola</title>
+    <style>
+      #consola {
+        height: 200px;
+        overflow-y: scroll;
+        border: 1px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="codigo"></textarea>
+    <button onclick="ejecutarCodigo()">Ejecutar</button>
+    <div id="consola"></div>
+    <script>
+      function mostrarConsola(texto) {
+        var consola = document.getElementById("consola");
+        consola.innerHTML += texto + "<br>";
+      }
+
+      function ejecutarCodigo() {
+        var codigo = document.getElementById("codigo").value;
+        try {
+          eval(codigo);
+        } catch (error) {
+          mostrarConsola(error);
+        }
+      }
+      console.log = mostrarConsola;
+    </script>
+  </body>
+</html>
